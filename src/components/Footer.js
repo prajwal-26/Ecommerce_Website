@@ -5,79 +5,76 @@ import { FaDiscord, FaInstagram, FaYoutube } from "react-icons/fa";
 import Button from "../styles/Button";
 
 const Footer = () => {
-    return (
-      <>
-        <Wrapper>
-          <section className="contact-short">
-            <div className="grid grid-two-column">
-              <div>
-                <h3>Ready to get started?</h3>
-                <h3>Talk to us today</h3>
-              </div>
-  
-              <div>
-                <Button className="btn hireme-btn">
-                  <NavLink to="/"> Get Started </NavLink>
-                </Button>
-              </div>
+  return (
+    <>
+      <Wrapper>
+        <section className="contact-short">
+          <div className="grid grid-two-column">
+            <div>
+              <h3>Ready to get started?</h3>
+              <h3>Talk to us today</h3>
             </div>
-          </section>
-    
-  
-          <footer>
-            <div className="container grid grid-four-column">
-              <div className="footer-about">
-                <h3>Prajwal</h3>
-                <p>Shop with confidence, knowing that we prioritize your
-                     happiness and provide seamless customer support.</p>
-              </div>
-              <div className="footer-subscribe">
-                <h3>Subscribe to get important updates</h3>
-                <form action="#">
-                  <input type="email" name="email" placeholder="E-MAIL" />
-  
-                  <input type="submit" value="subscribe" />
-                </form>
-              </div>
-              <div className="footer-social">
-                <h3>Follow Us</h3>
-                <div className="footer-social--icons">
-                  <div>
-                    <FaDiscord className="icons" />
-                  </div>
-                  <div>
-                    <FaInstagram className="icons" />
-                  </div>
-                  <div>
-                
-                      <FaYoutube className="icons" />
-                   
-                  </div>
-                </div>
-              </div>
-              <div className="footer-contact">
-                <h3>Call Us</h3>
-                <h3>+91 1234567891</h3>
-              </div>
+
+            <div>
+              <Button className="btn hireme-btn">
+                <NavLink to="/"> Get Started </NavLink>
+              </Button>
             </div>
-  
-            <div className="footer-bottom--section">
-              <hr />
-              <div className="container grid grid-two-column ">
-                <p>
-                  @{new Date().getFullYear()} Prajwal. All Rights Reserved
-                </p>
+          </div>
+        </section>
+
+        <footer>
+          <div className="container grid grid-four-column">
+            <div className="footer-about">
+              <h3>Prajwal</h3>
+              <p>
+                Shop with confidence, knowing that we prioritize your happiness
+                and provide seamless customer support.
+              </p>
+            </div>
+            <div className="footer-subscribe">
+              <h3>Subscribe to get important updates</h3>
+              <form action="#">
+                <input type="email" name="email" placeholder="E-MAIL" />
+
+                <input type="submit" value="subscribe" />
+              </form>
+            </div>
+            <div className="footer-social">
+              <h3>Follow Us</h3>
+              <div className="footer-social--icons">
                 <div>
-                  <p>PRIVACY POLICY</p>
-                  <p>TERMS & CONDITIONS</p>
+                  <FaDiscord className="icons" />
+                </div>
+                <div>
+                  <FaInstagram className="icons" />
+                </div>
+                <div>
+                  <FaYoutube className="icons" />
                 </div>
               </div>
             </div>
-          </footer>
-        </Wrapper>
-      </>
-    );
-  };
+            <div className="footer-contact">
+              <h3>Call Us</h3>
+              <h3>+91 1234567891</h3>
+            </div>
+          </div>
+
+          <div className="footer-bottom--section">
+            <hr />
+            <div className="container grid grid-two-column ">
+              <p>@{new Date().getFullYear()} Prajwal. All Rights Reserved</p>
+              <div>
+                <p>PRIVACY POLICY</p>
+                <p>TERMS & CONDITIONS</p>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </Wrapper>
+    </>
+  );
+};
 const Wrapper = styled.section`
   .iSIFGq {
     margin: 0;
@@ -118,7 +115,7 @@ const Wrapper = styled.section`
         border: 2px solid #00001a;
 
         .icons {
-          color:#00001a;
+          color: #00001a;
           font-size: 2.4rem;
           position: relative;
           cursor: pointer;
@@ -159,4 +156,4 @@ const Wrapper = styled.section`
   }
 `;
 
-export default Footer
+export default Footer;

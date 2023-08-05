@@ -17,7 +17,7 @@ const HeroSection = ({myData}) => {
                  hottest deals, and must-have products all in one place!
                  
                  Step into the spotlight with our exclusive collection of stylish apparel and accessories.</p>
-                 <NavLink>
+                 <NavLink to='/products'>
                     <Button>shop now</Button>
                  </NavLink>
             </div>

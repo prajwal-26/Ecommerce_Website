@@ -1,20 +1,23 @@
-import React, { useEffect } from 'react'
-import { useParams } from 'react-router-dom'
-import { useProductContext } from './context/productcontex';
-import  styled  from 'styled-components';
-import PageNavigation from './components/PageNavigation';
-import { Container } from './styles/Container';
+import { useEffect } from "react";
+import styled from "styled-components";
+import { useParams } from "react-router-dom";
+import { useProductContext } from "./context/productcontex";
+import PageNavigation from "./components/PageNavigation";
+import MyImage from "./components/MyImage";
+import { Container } from "./styles/Container";
+import FormatPrice from "./Helpers/FormatPrice";
 import { MdSecurity } from "react-icons/md";
 import { TbTruckDelivery, TbReplace } from "react-icons/tb";
-import MyImage from './components/MyImage';
-import AddToCart from "./components/AddToCart";
 import Star from "./components/Star";
-import FormatPrice from "./Helpers/FormatPrice";
+import AddToCart from "./components/AddToCart";
+
 const API = "https://api.pujakaitem.com/api/products";
 
 const SingleProduct = () => {
   const { getSingleProduct, isSingleLoading, singleProduct } =
-  useProductContext();
+    useProductContext();
+
+  const { id } = useParams();
 
   const {
     id: alias,
@@ -22,29 +25,24 @@ const SingleProduct = () => {
     company,
     price,
     description,
-    category,
     stock,
     stars,
     reviews,
     image,
   } = singleProduct;
 
-  const {id} = useParams();
-  
   useEffect(() => {
-   
     getSingleProduct(`${API}?id=${id}`);
-   
-  }, [])
+  }, []);
 
   if (isSingleLoading) {
     return <div className="page_loading">Loading.....</div>;
   }
-  
+
   return (
     <Wrapper>
-     <PageNavigation title={name}/>
-     <Container className="container">
+      <PageNavigation title={name} />
+      <Container className="container">
         <div className="grid grid-two-column">
           {/* product Images  */}
           <div className="product_images">
@@ -79,7 +77,7 @@ const SingleProduct = () => {
 
               <div className="product-warranty-data">
                 <TbTruckDelivery className="warranty-icon" />
-                <p>Prajwal Delivered </p>
+                <p>Thapa Delivered </p>
               </div>
 
               <div className="product-warranty-data">
@@ -106,9 +104,8 @@ const SingleProduct = () => {
         </div>
       </Container>
     </Wrapper>
-  )
-}
-
+  );
+};
 
 const Wrapper = styled.section`
   .container {
