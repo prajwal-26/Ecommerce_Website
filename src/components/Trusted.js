@@ -1,9 +1,9 @@
-import React from 'react'
-import { styled } from 'styled-components'
+import React from "react";
+import { styled } from "styled-components";
 const Trusted = () => {
   return (
     <div>
-      <Wrapper clasName='brand-section'>
+      <Wrapper clasName="brand-section">
         <div className="container">
           <h3>Trusted By 100+ Companies</h3>
           <div className="brand-section-slider">
@@ -27,11 +27,10 @@ const Trusted = () => {
             </div>
           </div>
         </div>
-
       </Wrapper>
     </div>
-  )
-}
+  );
+};
 
 const Wrapper = styled.section`
   padding: 9rem 0;
@@ -72,4 +71,4 @@ const Wrapper = styled.section`
   }
 `;
 
-export default Trusted
+export default Trusted;

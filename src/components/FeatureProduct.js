@@ -22,8 +22,7 @@ const FeatureProduct = () => {
         </div>
       </div>
     </Wrapper>
-  )
-  
+  ) 
 };
 
 const Wrapper = styled.section`
